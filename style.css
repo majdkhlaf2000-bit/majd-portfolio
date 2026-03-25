@@ -581,13 +581,13 @@ body.dark .gallery .item {
   border: 1px solid #ccc;   /* نفس لون الحدود */
   font-size: 16px;          /* نفس حجم الخط */
   background: transparent;
-  color: inherit;
+  color: #ccc;
   outline: none;
   box-sizing: border-box;
 }
 
 /* اختياري: عند التركيز */
 .iti__field:focus {
-  border-color: #2ecc71;   /* نفس اللون الأخضر اللي بتحبه */
-  box-shadow: 0 0 6px rgba(46, 204, 113, 0.4);
+  border-color: #BB4500; 
+  box-shadow: 0 0 6px rgba(0, 0, 0);
 }
