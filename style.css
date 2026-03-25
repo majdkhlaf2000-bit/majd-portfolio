@@ -571,32 +571,23 @@ body.dark .gallery .item {
 .iti {
   width: 100%;
   margin-bottom: 15px;
+  box-sizing: border-box;
 }
 
-/* نخلي حقل الموبايل نفس أي input عندك */
-.iti input {
-  width: 100%;
-  padding: 12px;
-  border-radius: 8px; /* نفس تبعك إذا مختلف عدل الرقم */
-  border: 1px solid #ccc; /* نفس لونك */
-  font-size: 16px;
+.iti__field {
+  width: 100% !important; /* عشان ياخد كل عرض الحقل */
+  padding: 12px;           /* نفس padding للـ name/email */
+  border-radius: 8px;       /* نفس الـ border radius */
+  border: 1px solid #ccc;   /* نفس لون الحدود */
+  font-size: 16px;          /* نفس حجم الخط */
   background: transparent;
   color: inherit;
-}
-
-/* لما تضغط عليه */
-.iti input:focus {
   outline: none;
-  border-color: inherit;
-  box-shadow: none;
+  box-sizing: border-box;
 }
 
-/* نخفي أي ستايل إضافي من المكتبة */
-.iti--separate-dial-code .iti__selected-flag {
-  background: transparent;
-}
-
-/* قائمة الدول نفس الستايل العام */
-.iti__country-list {
-  font-family: inherit;
+/* اختياري: عند التركيز */
+.iti__field:focus {
+  border-color: #2ecc71;   /* نفس اللون الأخضر اللي بتحبه */
+  box-shadow: 0 0 6px rgba(46, 204, 113, 0.4);
 }
