@@ -187,6 +187,18 @@
     <p>© 2025 Majd - جميع الحقوق محفوظة</p>
   </footer>
 
+  <!-- سكربت رقم الموبايل -->
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+
+  <script>
+    const input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      initialCountry: "auto",
+      separateDialCode: true,
+      preferredCountries: ["sy", "ae", "nl"],
+    });
+  </script>
+  
   <script src="script.js"></script>
 </body>
 </html>
