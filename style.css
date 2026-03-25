@@ -566,3 +566,37 @@ body.dark .gallery .item {
     height: 180px;
   }
 }
+
+/* خليه ياخد نفس عرض الحقول */
+.iti {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* نخلي حقل الموبايل نفس أي input عندك */
+.iti input {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px; /* نفس تبعك إذا مختلف عدل الرقم */
+  border: 1px solid #ccc; /* نفس لونك */
+  font-size: 16px;
+  background: transparent;
+  color: inherit;
+}
+
+/* لما تضغط عليه */
+.iti input:focus {
+  outline: none;
+  border-color: inherit;
+  box-shadow: none;
+}
+
+/* نخفي أي ستايل إضافي من المكتبة */
+.iti--separate-dial-code .iti__selected-flag {
+  background: transparent;
+}
+
+/* قائمة الدول نفس الستايل العام */
+.iti__country-list {
+  font-family: inherit;
+}
