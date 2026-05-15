@@ -561,10 +561,10 @@ body.dark .gallery .item {
     width: 100%;
   }
 
-  .gallery .item {
-    width: 100%;
-    height: 180px;
-  }
+  .gallery .item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
 }
 
 /* خليه ياخد نفس عرض الحقول */
@@ -591,4 +591,33 @@ body.dark .gallery .item {
 .iti__field:focus {
   border-color: #ee0000;   /* نفس اللون الأخضر اللي بتحبه */
   box-shadow: 0 0 6px rgb(0, 0, 0);
+}
+
+/* ⭐ كروت البورتفوليو (الأقسام) */
+.gallery .item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* الصورة داخل الكرت */
+.gallery .item img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* اسم القسم تحت الصورة */
+.gallery .item p {
+  margin-top: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  color: #222;
+}
+
+/* تحسين الرابط داخل الكرت */
+.gallery .item a {
+  text-decoration: none;
+  color: inherit;
 }
