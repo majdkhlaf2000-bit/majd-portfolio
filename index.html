@@ -5,122 +5,133 @@
   <title>معرض أعمال Majd</title>
   <link rel="stylesheet" href="style.css">
 
+  <!-- مكتبة رقم الموبايل -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"/>
 </head>
 <body>
 
-<div id="loader">
+  <!-- رأس الموقع -->
+   <div id="loader">
   <div class="spinner"></div>
 </div>
 
-<header>
-  <div class="logo">Majd Khlaf</div>
-  <nav>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header>
+    <div class="logo">Majd Khlaf</div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+  <button id="darkModeToggle" class="dark-btn">
+    <span id="darkIcon">🌙</span>
+  </button>
+</li>
+      </ul>
+    </nav>
+  </header>
 
-<section id="hero">
-  <h1>A WORLD OF CREATIVITY</h1>
-  <p>Photographer - Videographer - Graphic Designer</p>
-  <a href="#projects" class="btn">View My Work</a>
-</section>
+  <!-- قسم الترحيب -->
+  <section id="hero">
+    <h1>A WORLD OF CREATIVITY</h1>
+    <p>Photographer - Videographer - Graphic Designer</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
 
-<section id="about">
-  <div class="about-container">
-    <img src="image/majd12.png.png" class="about-img">
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>I am Majd Khlaf, Photographer, Videographer, and Graphic Designer.</p>
+  <!-- About -->
+  <section id="about">
+    <div class="about-container">
+      <img src="image/majd12.png.png" alt="Majd Photo" class="about-img">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I am Majd Khlaf, a passionate Photographer, Videographer, and Graphic Designer.
+          I create visual stories through creative photography, cinematic videos, and
+          modern graphic design.
+        </p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section id="services">
-  <h2 class="section-title">My Services</h2>
+  <!-- Services -->
+  <section id="services">
+    <h2 class="section-title">My Services</h2>
 
-  <div class="services-box">
-    <div class="service"><h3>📸 Photography</h3></div>
-    <div class="service"><h3>🎥 Videography</h3></div>
-    <div class="service"><h3>🎨 Graphic Design</h3></div>
-  </div>
-</section>
+    <div class="services-box">
+      <div class="service">
+        <h3>📸 Photography</h3>
+        <p>Professional photography.</p>
+      </div>
 
-<!-- PORTFOLIO -->
-<section id="projects">
-  <h2>Portfolio</h2>
+      <div class="service">
+        <h3>🎥 Videography</h3>
+        <p>Cinematic videos.</p>
+      </div>
 
-  <div class="filters">
-    <button class="filter-btn active">All</button>
-  </div>
-
-  <div class="gallery">
-
-    <div class="item image">
-      <img src="work1.jpg">
+      <div class="service">
+        <h3>🎨 Graphic Design</h3>
+        <p>Logos & designs.</p>
+      </div>
     </div>
+  </section>
 
-    <div class="item image">
-      <img src="work2.jpg">
-    </div>
+  <!-- Portfolio -->
+  <section id="projects">
+    <h2>Portfolio</h2>
 
-    <!-- ⭐ تخرج -->
-    <div class="item image">
-      <a href="graduation.html">
-        <img src="graduation-cover.jpg">
-        <p style="text-align:center;">Graduation 🎓</p>
-      </a>
-    </div>
-
-    <!-- ⭐ خطوبات -->
-    <div class="item image">
-      <a href="engagement.html">
-        <img src="engagement-cover.jpg">
-        <p style="text-align:center;">Engagement 💍</p>
-      </a>
-    </div>
-
-    <!-- ⭐ ديكورات -->
-    <div class="item image">
-      <a href="decorations.html">
-        <img src="decorations-cover.jpg">
-        <p style="text-align:center;">Decorations 🎨</p>
-      </a>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="image">Photo</button>
+      <button class="filter-btn" data-filter="video">Video</button>
+      <button class="filter-btn" data-filter="design">Design</button>
     </div>
 
-    <!-- ⭐ أشخاص -->
-    <div class="item image">
-      <a href="people.html">
-        <img src="people-cover.jpg">
-        <p style="text-align:center;">People 👤</p>
-      </a>
+    <div class="gallery">
+      <div class="item image"><img src="work1.jpg"></div>
+      <div class="item image"><img src="work2.jpg"></div>
+      <div class="item video"><img src="video-thumb1.jpg"></div>
+      <div class="item design"><img src="design1.jpg"></div>
     </div>
+  </section>
 
-  </div>
-</section>
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
 
-<section id="contact">
-  <h2>Contact Me</h2>
+    <form action="https://formspree.io/f/xpqozaqp" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
 
-  <form action="https://formspree.io/f/xpqozaqp" method="POST">
-    <input type="text" placeholder="Your Name" required>
-    <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
-    <input type="email" placeholder="Your Email" required>
-    <textarea placeholder="Your Message" required></textarea>
-    <button type="submit" class="btn">Send</button>
-  </form>
-</section>
+      <!-- رقم مع اختيار الدولة -->
+      <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
 
-<footer>
-  <p>© 2025 Majd - جميع الحقوق محفوظة</p>
-</footer>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
 
-<script src="script.js"></script>
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <button id="scrollTopBtn">↑</button>
+
+  <footer>
+    <p>© 2025 Majd</p>
+  </footer>
+
+  <!-- سكربت رقم الموبايل -->
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+
+  <script>
+    const input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      initialCountry: "auto",
+      separateDialCode: true,
+      preferredCountries: ["sy", "ae", "nl"],
+    });
+  </script>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
