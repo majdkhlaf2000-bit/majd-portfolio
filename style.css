@@ -591,3 +591,44 @@ body.dark .gallery .item {
   border-color: #BB4500; 
   box-shadow: 0 0 6px rgba(0, 0, 0);
 }
+
+/* ⭐ تحسين شكل صفحات الأقسام (تخرج / خطوبات / ديكورات / أشخاص) */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.gallery img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
+}
+
+/* ⭐ عنوان الصفحات */
+h1 {
+  margin-top: 20px;
+  font-size: 32px;
+  color: #222;
+}
+
+/* ⭐ زر الرجوع */
+a {
+  text-decoration: none;
+  color: #BB4500;
+  font-weight: bold;
+}
+
+a:hover {
+  color: #626675;
+}
