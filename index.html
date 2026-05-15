@@ -78,52 +78,65 @@
   </section>
 
   <!-- Portfolio -->
-  <section id="projects">
-    <h2>Portfolio</h2>
+<section id="projects">
+  <h2>Portfolio</h2>
 
-    <div class="filters">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="image">Photo</button>
-      <button class="filter-btn" data-filter="video">Video</button>
-      <button class="filter-btn" data-filter="design">Design</button>
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="image">Photo</button>
+    <button class="filter-btn" data-filter="video">Video</button>
+    <button class="filter-btn" data-filter="design">Design</button>
+  </div>
+
+  <div class="gallery">
+
+    <!-- 🎓 Graduation -->
+    <div class="item image" onclick="toggleCard(this)">
+      <img src="graduation-cover.jpg">
+      <div class="title">Graduation 🎓</div>
+
+      <div class="sub-gallery">
+        <img src="grad1.jpg">
+        <img src="grad2.jpg">
+        <img src="grad3.jpg">
+      </div>
     </div>
 
-    <div class="gallery">
-
-  <!-- 🎓 Graduation -->
-  <div class="item image">
-    <a href="graduation.html">
-      <img src="graduation-cover.jpg" alt="Graduation">
-      <div class="title">Graduation 🎓</div>
-    </a>
-  </div>
-
-  <!-- 💍 Engagement -->
-  <div class="item image">
-    <a href="engagement.html">
-      <img src="engagement-cover.jpg" alt="Engagement">
+    <!-- 💍 Engagement -->
+    <div class="item image" onclick="toggleCard(this)">
+      <img src="engagement-cover.jpg">
       <div class="title">Engagement 💍</div>
-    </a>
-  </div>
 
-  <!-- 🎨 Decorations -->
-  <div class="item image">
-    <a href="decorations.html">
-      <img src="decorations-cover.jpg" alt="Decorations">
+      <div class="sub-gallery">
+        <img src="eng1.jpg">
+        <img src="eng2.jpg">
+      </div>
+    </div>
+
+    <!-- 🎨 Decorations -->
+    <div class="item image" onclick="toggleCard(this)">
+      <img src="decorations-cover.jpg">
       <div class="title">Decorations 🎨</div>
-    </a>
-  </div>
 
-  <!-- 👤 People -->
-  <div class="item image">
-    <a href="people.html">
-      <img src="people-cover.jpg" alt="People">
+      <div class="sub-gallery">
+        <img src="dec1.jpg">
+        <img src="dec2.jpg">
+      </div>
+    </div>
+
+    <!-- 👤 People -->
+    <div class="item image" onclick="toggleCard(this)">
+      <img src="people-cover.jpg">
       <div class="title">People 👤</div>
-    </a>
-  </div>
 
-</div>
-  </section>
+      <div class="sub-gallery">
+        <img src="p1.jpg">
+        <img src="p2.jpg">
+      </div>
+    </div>
+
+  </div>
+</section>
 
   <!-- Contact -->
   <section id="contact">
