@@ -22,11 +22,6 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li>
-        <button id="darkModeToggle" class="dark-btn">
-          <span id="darkIcon">🌙</span>
-        </button>
-      </li>
     </ul>
   </nav>
 </header>
@@ -42,9 +37,7 @@
     <img src="image/majd12.png.png" class="about-img">
     <div class="about-text">
       <h2>About Me</h2>
-      <p>
-        I am Majd Khlaf, Photographer, Videographer, and Graphic Designer.
-      </p>
+      <p>I am Majd Khlaf, Photographer, Videographer, and Graphic Designer.</p>
     </div>
   </div>
 </section>
@@ -53,17 +46,9 @@
   <h2 class="section-title">My Services</h2>
 
   <div class="services-box">
-    <div class="service">
-      <h3>📸 Photography</h3>
-    </div>
-
-    <div class="service">
-      <h3>🎥 Videography</h3>
-    </div>
-
-    <div class="service">
-      <h3>🎨 Graphic Design</h3>
-    </div>
+    <div class="service"><h3>📸 Photography</h3></div>
+    <div class="service"><h3>🎥 Videography</h3></div>
+    <div class="service"><h3>🎨 Graphic Design</h3></div>
   </div>
 </section>
 
@@ -72,10 +57,7 @@
   <h2>Portfolio</h2>
 
   <div class="filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="image">Photo</button>
-    <button class="filter-btn" data-filter="video">Video</button>
-    <button class="filter-btn" data-filter="design">Design</button>
+    <button class="filter-btn active">All</button>
   </div>
 
   <div class="gallery">
@@ -88,25 +70,39 @@
       <img src="work2.jpg">
     </div>
 
-    <!-- ⭐ تخرج (معدل) -->
-    <div class="item image" onclick="openGraduation()">
-      <img src="graduation-cover.jpg" alt="تخرج">
-      <p style="text-align:center;">تخرج 🎓</p>
+    <!-- ⭐ تخرج -->
+    <div class="item image">
+      <a href="graduation.html">
+        <img src="graduation-cover.jpg">
+        <p style="text-align:center;">Graduation 🎓</p>
+      </a>
     </div>
 
-    <div class="item video">
-      <img src="video-thumb1.jpg">
+    <!-- ⭐ خطوبات -->
+    <div class="item image">
+      <a href="engagement.html">
+        <img src="engagement-cover.jpg">
+        <p style="text-align:center;">Engagement 💍</p>
+      </a>
     </div>
 
-    <div class="item design">
-      <img src="design1.jpg">
+    <!-- ⭐ ديكورات -->
+    <div class="item image">
+      <a href="decorations.html">
+        <img src="decorations-cover.jpg">
+        <p style="text-align:center;">Decorations 🎨</p>
+      </a>
+    </div>
+
+    <!-- ⭐ أشخاص -->
+    <div class="item image">
+      <a href="people.html">
+        <img src="people-cover.jpg">
+        <p style="text-align:center;">People 👤</p>
+      </a>
     </div>
 
   </div>
-</section>
-
-<section id="testimonials">
-  <h2>What Clients Say</h2>
 </section>
 
 <section id="contact">
@@ -121,40 +117,10 @@
   </form>
 </section>
 
-<button id="scrollTopBtn">↑</button>
-
 <footer>
   <p>© 2025 Majd - جميع الحقوق محفوظة</p>
 </footer>
 
-<!-- ⭐ POPUP التخرج -->
-<div id="graduationModal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:black; overflow:auto; z-index:9999; padding:20px;">
-  
-  <h1 style="color:white; text-align:center;">صور التخرج 🎓</h1>
-
-  <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:10px;">
-    <img src="grad1.jpg" style="width:200px;">
-    <img src="grad2.jpg" style="width:200px;">
-    <img src="grad3.jpg" style="width:200px;">
-  </div>
-
-  <div style="text-align:center; margin-top:20px;">
-    <button onclick="closeGraduation()" style="padding:10px 20px;">رجوع</button>
-  </div>
-
-</div>
-
 <script src="script.js"></script>
-
-<script>
-function openGraduation(){
-  document.getElementById("graduationModal").style.display = "block";
-}
-
-function closeGraduation(){
-  document.getElementById("graduationModal").style.display = "none";
-}
-</script>
-
 </body>
 </html>
