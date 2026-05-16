@@ -78,7 +78,7 @@ document.addEventListener("DOMContentLoaded", () => {
           item.style.display = "block";
         } 
         else if (item.classList.contains(filter)) {
-          item.style.display = "block";
+          item.style.display = "flex";
         } 
         else {
           item.style.display = "none";
