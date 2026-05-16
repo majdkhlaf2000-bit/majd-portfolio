@@ -90,7 +90,7 @@ nav ul li button:hover {
   transform: scale(1.05);
 }
 
-/* قسم About */
+/* About */
 #about {
   text-align: center;
   padding: 50px 0;
@@ -115,7 +115,7 @@ nav ul li button:hover {
   max-width: 600px;
 }
 
-/* قسم الخدمات */
+/* Services */
 #services {
   padding: 60px 20px;
   text-align: center;
@@ -138,20 +138,27 @@ nav ul li button:hover {
   background: #626675;
   padding: 25px;
   width: 250px;
+  height: 180px;
   border-radius: 12px;
   box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
+  transition: 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .service:hover {
   background: #BB4500;
   transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
 }
 
 .service h3 {
   font-size: 20px;
   margin-bottom: 12px;
   color: #fff;
+  text-align: center;
 }
 
 .service p {
@@ -160,7 +167,7 @@ nav ul li button:hover {
   line-height: 1.6;
 }
 
-/* قسم الأعمال */
+/* Projects */
 #projects {
   padding: 40px 20px;
 }
@@ -170,7 +177,7 @@ nav ul li button:hover {
   margin-bottom: 30px;
 }
 
-/* الفلاتر */
+/* Filters */
 .filters {
   text-align: center;
   margin-bottom: 25px;
@@ -197,32 +204,15 @@ nav ul li button:hover {
   background: #BB4500;
 }
 
-/* المعرض */
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
+/* Portfolio box */
+.portfolio-box{
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
 }
 
-.gallery .item {
-  overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px #626675;
-  animation: slideUp 1s ease-in-out;
-}
-
-.gallery img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform 0.3s;
-}
-
-.gallery img:hover {
-  transform: scale(1.05);
-}
-
-/* قسم Testimonials */
+/* Testimonials */
 #testimonials {
   padding: 60px 20px;
   text-align: center;
@@ -271,7 +261,7 @@ nav ul li button:hover {
   font-style: italic;
 }
 
-/* قسم التواصل */
+/* Contact */
 #contact {
   padding: 40px 20px;
   background: #eee;
@@ -315,7 +305,7 @@ form button:hover {
   transform: scale(1.05);
 }
 
-/* زر العودة للأعلى */
+/* Scroll button */
 #scrollTopBtn {
   position: fixed;
   bottom: 25px;
@@ -334,7 +324,7 @@ form button:hover {
   background: #626675;
 }
 
-/* الفوتر */
+/* Footer */
 footer {
   text-align: center;
   padding: 20px;
@@ -342,124 +332,13 @@ footer {
   color: #fff;
 }
 
-.footer-social {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.icon-btn {
-  display: inline-block;
-  margin: 0 10px;
-  transition: transform 0.3s;
-}
-
-.icon-btn:hover {
-  transform: scale(1.15);
-}
-
-.footer-divider {
-  width: 80%;
-  height: 2px;
-  background: #fff;
-  margin: 15px auto;
-  border-radius: 2px;
-}
-
-/* أنيميشن */
+/* Animations */
 @keyframes fadeIn {
   from { opacity: 0; }
   to { opacity: 1; }
 }
 
-@keyframes slideUp {
-  from { transform: translateY(20px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* الوضع الليلي */
-body.dark {
-  background: #121212;
-  color: #ddd;
-}
-
-body.dark header,
-body.dark footer {
-  background: #333;
-}
-
-body.dark .btn {
-  background: #333;
-  color: #BB4500;
-}
-
-body.dark .btn:hover {
-  background: #BB4500;
-  color: #fff;
-}
-
-/* ميديا */
-@media (max-width: 600px) {
-  header {
-    flex-direction: column;
-  }
-  nav ul {
-    flex-direction: column;
-    margin-top: 10px;
-  }
-  nav ul li {
-    margin: 10px 0;
-  }
-  .testimonials-box {
-    grid-template-columns: 1fr;
-  }
-}
-
-.gallery .item {
-  position: relative;
-  overflow: hidden;
-}
-
-.gallery .item::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.25);
-  opacity: 0;
-  transition: 0.3s;
-}
-
-.gallery .item:hover::after {
-  opacity: 1;
-}
-
-.gallery .item img {
-  transition: transform 0.4s ease;
-}
-
-.gallery .item:hover img {
-  transform: scale(1.08);
-}
-
-.service {
-  transition: 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service:hover {
-  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
-}
-
-.btn {
-  transition: 0.3s ease;
-}
-
-.btn:hover {
-  transform: translateY(-3px);
-}
-
-/* LOADER */
+/* Loader */
 #loader {
   position: fixed;
   top: 0;
@@ -492,21 +371,7 @@ body.dark .btn:hover {
   to { transform: rotate(360deg); }
 }
 
-/* زر الوضع الليلي */
-.dark-btn {
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-size: 22px;
-  color: #fff;
-  transition: transform 0.3s;
-}
-
-.dark-btn:hover {
-  transform: scale(1.2);
-}
-
-/* تحسينات الوضع الليلي */
+/* Dark mode */
 body.dark {
   background: #121212;
   color: #ddd;
@@ -515,11 +380,10 @@ body.dark {
 body.dark header,
 body.dark footer,
 body.dark #contact {
-  background: #1a1a1a
+  background: #1a1a1a;
 }
 
 body.dark .service,
-body.dark .testimonial,
 body.dark .filter-btn {
   background: #2a2a2a;
 }
@@ -529,25 +393,10 @@ body.dark .filter-btn.active {
 }
 
 body.dark .gallery .item::after {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255,255,255,0.05);
 }
 
-body.dark #services h2 {
-  color: #fff;
-}
-
-body.dark #testimonials h2 {
-  color: #fff;
-}
-
-body.dark .gallery .item::after {
-  background: rgba(255, 255, 255, 0.05); /* كان 0.1 أو 0.25 */
-}
-
-body.dark .gallery .item {
-  box-shadow: 0 0 10px #6266753b /* ظل خفيف */
-}
-
+/* Mobile */
 @media (max-width: 768px) {
   #hero h1 {
     font-size: 32px;
@@ -567,7 +416,7 @@ body.dark .gallery .item {
   }
 }
 
-/* خليه ياخد نفس عرض الحقول */
+/* Phone input */
 .iti {
   width: 100%;
   margin-bottom: 15px;
@@ -575,51 +424,17 @@ body.dark .gallery .item {
 }
 
 .iti__field {
-  width: 100% !important; /* عشان ياخد كل عرض الحقل */
-  padding: 12px;           /* نفس padding للـ name/email */
-  border-radius: 8px;       /* نفس الـ border radius */
-  border: 1px solid #eee;   /* نفس لون الحدود */
+  width: 100% !important;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #eee;
   font-family: inherit;
-  font-size: 16px;          /* نفس حجم الخط */
+  font-size: 16px;
   background: transparent;
   color: #eee;
-  outline: none;
-  box-sizing: border-box;
 }
 
-/* اختياري: عند التركيز */
 .iti__field:focus {
-  border-color: #ee0000;   /* نفس اللون الأخضر اللي بتحبه */
+  border-color: #ee0000;
   box-shadow: 0 0 6px rgb(0, 0, 0);
-}
-
-/* ===== ALBUMS = SAME AS SERVICES ===== */
-
-#projects .services-box{
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  flex-wrap: wrap;
-}
-
-#projects .service{
-  width: 250px;
-  height: 180px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-#projects .service h3{
-  font-size: 20px;
-  color: #fff;
-  text-align: center;
-}
-
-/* نفس الهوفر تبع My Services (بدون تغيير) */
-#projects .service:hover{
-  background: #BB4500;
-  transform: translateY(-5px);
 }
