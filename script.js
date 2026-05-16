@@ -19,10 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ============================
-     LOADER
+     LOADER (FIXED)
   ============================ */
+  const loader = document.getElementById("loader");
+
   window.addEventListener("load", () => {
-    const loader = document.getElementById("loader");
     if (loader) {
       setTimeout(() => {
         loader.classList.add("hide");
@@ -58,7 +59,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ============================
-     PORTFOLIO FILTER (FIXED)
+     PORTFOLIO FILTER (WORKING 100%)
   ============================ */
   const filterBtns = document.querySelectorAll(".filter-btn");
   const items = document.querySelectorAll("#projects .item");
@@ -66,7 +67,6 @@ document.addEventListener("DOMContentLoaded", () => {
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
 
-      // active button
       filterBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
@@ -76,11 +76,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (filter === "all") {
           item.style.display = "block";
-          item.style.opacity = "1";
         } 
         else if (item.classList.contains(filter)) {
           item.style.display = "block";
-          item.style.opacity = "1";
         } 
         else {
           item.style.display = "none";
