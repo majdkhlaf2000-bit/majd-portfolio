@@ -43,7 +43,7 @@
   <!-- About -->
   <section id="about">
     <div class="about-container">
-      <img src="./image/logo.png" alt="Majd Photo" class="about-img">
+      <img src="image/majd12.png.png" alt="Majd Photo" class="about-img">
       <div class="about-text">
         <h2>About Me</h2>
         <p>
@@ -78,29 +78,23 @@
   </section>
 
   <!-- Portfolio -->
-<section id="projects">
-  <h2>Portfolio</h2>
+  <section id="projects">
+    <h2>Portfolio</h2>
 
-  <div class="gallery">
-
-    <!-- 🎓 Graduation -->
-    <div class="item" onclick="location.href='graduation.html'">
-      <img src="graduation-cover.jpg" alt="Graduation">
-      <div class="title">Graduation 🎓</div>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="image">Photo</button>
+      <button class="filter-btn" data-filter="video">Video</button>
+      <button class="filter-btn" data-filter="design">Design</button>
     </div>
 
-    <!-- 💍 Engagement -->
-    <div class="item" onclick="location.href='engagement.html'">
-      <img src="engagement-cover.jpg" alt="Engagement">
-      <div class="title">Engagement 💍</div>
+    <div class="gallery">
+      <div class="item image"><img src="work1.jpg"></div>
+      <div class="item image"><img src="work2.jpg"></div>
+      <div class="item video"><img src="video-thumb1.jpg"></div>
+      <div class="item design"><img src="design1.jpg"></div>
     </div>
-
-    <!-- 🎨 Decorations -->
-    <div class="item" onclick="location.href='decorations.html'">
-      <img src="decorations-cover.jpg" alt="Decorations">
-      <div class="title">Decorations 🎨</div>
-    </div>
-
+  </section>
 
   <!-- Contact -->
   <section id="contact">
