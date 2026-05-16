@@ -11,9 +11,9 @@
 <body>
 
   <!-- رأس الموقع -->
-   <div id="loader">
-  <div class="spinner"></div>
-</div>
+  <div id="loader">
+    <div class="spinner"></div>
+  </div>
 
   <header>
     <div class="logo">Majd Khlaf</div>
@@ -25,10 +25,10 @@
         <li><a href="#projects">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
         <li>
-  <button id="darkModeToggle" class="dark-btn">
-    <span id="darkIcon">🌙</span>
-  </button>
-</li>
+          <button id="darkModeToggle" class="dark-btn">
+            <span id="darkIcon">🌙</span>
+          </button>
+        </li>
       </ul>
     </nav>
   </header>
@@ -73,45 +73,46 @@
   </section>
 
   <!-- Portfolio -->
-<section id="projects">
-  <h2>Portfolio</h2>
+  <section id="projects">
+    <h2>Portfolio</h2>
 
-  <div class="filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="photo">Photo</button>
-    <button class="filter-btn" data-filter="design">Design</button>
-  </div>
-
-  <div class="services-box">
-
-    <!-- PHOTO ALBUMS -->
-    <div class="service photo" onclick="window.location.href='album1.html'">
-      <h3>📸 Photo Album 1</h3>
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="photo">Photo</button>
+      <button class="filter-btn" data-filter="design">Design</button>
     </div>
 
-    <div class="service photo" onclick="window.location.href='album2.html'">
-      <h3>📸 Photo Album 2</h3>
-    </div>
+    <!-- 🔴 FIX: فقط هذا التعديل -->
+    <div class="portfolio-box">
 
-    <div class="service photo" onclick="window.location.href='album3.html'">
-      <h3>📸 Photo Album 3</h3>
-    </div>
+      <!-- PHOTO ALBUMS -->
+      <div class="service photo" onclick="window.location.href='album1.html'">
+        <h3>📸 Photo Album 1</h3>
+      </div>
 
-    <div class="service photo" onclick="window.location.href='album4.html'">
-      <h3>📸 Photo Album 4</h3>
-    </div>
+      <div class="service photo" onclick="window.location.href='album2.html'">
+        <h3>📸 Photo Album 2</h3>
+      </div>
 
-    <!-- DESIGN ALBUMS -->
-    <div class="service design" onclick="window.location.href='design1.html'">
-      <h3>🎨 Design Album 1</h3>
-    </div>
+      <div class="service photo" onclick="window.location.href='album3.html'">
+        <h3>📸 Photo Album 3</h3>
+      </div>
 
-    <div class="service design" onclick="window.location.href='design2.html'">
-      <h3>🎨 Design Album 2</h3>
-    </div>
+      <div class="service photo" onclick="window.location.href='album4.html'">
+        <h3>📸 Photo Album 4</h3>
+      </div>
 
-  </div>
-</section>
+      <!-- DESIGN ALBUMS -->
+      <div class="service design" onclick="window.location.href='design1.html'">
+        <h3>🎨 Design Album 1</h3>
+      </div>
+
+      <div class="service design" onclick="window.location.href='design2.html'">
+        <h3>🎨 Design Album 2</h3>
+      </div>
+
+    </div>
+  </section>
 
   <!-- Contact -->
   <section id="contact">
@@ -120,7 +121,6 @@
     <form action="https://formspree.io/f/xpqozaqp" method="POST">
       <input type="text" name="name" placeholder="Your Name" required>
 
-      <!-- رقم مع اختيار الدولة -->
       <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
 
       <input type="email" name="email" placeholder="Your Email" required>
