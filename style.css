@@ -1,6 +1,4 @@
-/* =========================
-   RESET
-========================= */
+/* إعدادات عامة */
 * {
   margin: 0;
   padding: 0;
@@ -8,16 +6,14 @@
 }
 
 body {
-  font-family: Tahoma, sans-serif;
+  font-family: "Tahoma", sans-serif;
   background: #f4f4f4;
   color: #222;
   line-height: 1.6;
-  transition: 0.4s;
+  transition: background 0.5s, color 0.5s;
 }
 
-/* =========================
-   HEADER
-========================= */
+/* رأس الموقع */
 header {
   display: flex;
   justify-content: space-between;
@@ -30,8 +26,8 @@ header {
   z-index: 1000;
 }
 
-.logo {
-  font-size: 20px;
+header .logo {
+  font-size: 1.5em;
   font-weight: bold;
 }
 
@@ -47,132 +43,228 @@ nav ul li {
 
 nav ul li a,
 nav ul li button {
-  color: white;
+  color: #fff;
   text-decoration: none;
-  background: none;
+  background: transparent;
   border: none;
   cursor: pointer;
-  transition: 0.3s;
+  font-size: 1em;
+  transition: transform 0.2s, color 0.3s;
 }
 
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li button:hover {
   color: #BB4500;
+  transform: scale(1.1);
 }
 
-/* =========================
-   HERO
-========================= */
+/* قسم الترحيب */
 #hero {
   text-align: center;
   padding: 80px 20px;
   background: linear-gradient(to right, #626675, #D1D3CE);
+  color: #383b44;
+  animation: fadeIn 2s ease-in-out;
+}
+
+#hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
 }
 
 .btn {
   display: inline-block;
+  margin-top: 20px;
   padding: 12px 25px;
   background: #626675;
-  color: white;
-  border-radius: 6px;
-  margin-top: 15px;
+  color: #D1D3CE;
+  border-radius: 5px;
   text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
 }
 
-/* =========================
-   ABOUT
-========================= */
+.btn:hover {
+  background: #383b44;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* About */
 #about {
   text-align: center;
-  padding: 50px 20px;
+  padding: 50px 0;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 
 .about-img {
-  width: 200px;
-  border-radius: 50%;
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 150px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
 }
 
-/* =========================
-   SERVICES
-========================= */
+.about-text {
+  max-width: 600px;
+}
+
+/* Services */
+#services {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#services h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #1f1f1f;
+}
+
 .services-box {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   flex-wrap: wrap;
 }
 
 .service {
   background: #626675;
-  padding: 20px;
+  padding: 25px;
   width: 250px;
-  border-radius: 10px;
-  color: white;
-  transition: 0.3s;
+  height: 180px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .service:hover {
   background: #BB4500;
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.35);
 }
 
-/* =========================
-   PORTFOLIO GRID (2 ITEMS PER ROW)
-========================= */
+.service h3 {
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #fff;
+  text-align: center;
+}
+
+.service p {
+  font-size: 15px;
+  color: #ccc;
+  line-height: 1.6;
+}
+
+/* Projects */
 #projects {
-  padding: 50px 20px;
+  padding: 40px 20px;
 }
 
+#projects h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Filters */
 .filters {
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .filter-btn {
-  padding: 8px 15px;
+  padding: 10px 20px;
   margin: 5px;
   border: none;
   background: #626675;
-  color: white;
-  border-radius: 5px;
+  color: #fff;
   cursor: pointer;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.filter-btn:hover {
+  background: #383b44;
+  transform: scale(1.05);
 }
 
 .filter-btn.active {
   background: #BB4500;
 }
 
-/* 👇 أهم جزء */
-.portfolio-box {
+/* Portfolio box */
+.portfolio-box{
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+/* Testimonials */
+#testimonials {
+  padding: 60px 20px;
+  text-align: center;
+}
+
+#testimonials h2 {
+  font-size: 28px;
+  margin-bottom: 40px;
+  color: #1f1f1f;
+}
+
+.testimonials-box {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 900px;
+  gap: 25px;
+  max-width: 1000px;
   margin: auto;
 }
 
-/* كل كرت */
-.portfolio-box .service {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+.testimonial {
+  background: #1f1f1f;
+  padding: 30px;
+  border-radius: 12px;
+  min-height: 200px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  text-align: left;
 }
 
-/* رقم الصور تحت الاسم */
-.count {
-  margin-top: 8px;
+.testimonial:hover {
   background: #BB4500;
-  color: white;
-  font-size: 12px;
-  padding: 3px 10px;
-  border-radius: 20px;
+  transform: translateY(-5px);
 }
 
-/* =========================
-   CONTACT
-========================= */
+.client {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.quote {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #ddd;
+  font-style: italic;
+}
+
+/* Contact */
 #contact {
-  padding: 40px;
+  padding: 40px 20px;
+  background: #eee;
   text-align: center;
 }
 
@@ -183,64 +275,115 @@ form {
   flex-direction: column;
 }
 
-input, textarea {
-  margin-bottom: 10px;
+form input,
+form textarea {
+  margin-bottom: 15px;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #626675;
+  border-radius: 5px;
+  transition: border 0.3s, box-shadow 0.3s;
 }
 
-/* =========================
-   LOADER FIX (IMPORTANT)
-========================= */
+form input:focus,
+form textarea:focus {
+  border: 1px solid #BB4500;
+  box-shadow: 0 0 5px #BB4500;
+}
+
+form button {
+  padding: 12px;
+  background: #BB4500;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+form button:hover {
+  background: #626675;
+  transform: scale(1.05);
+}
+
+/* Scroll button */
+#scrollTopBtn {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background: #BB4500;
+  color: #fff;
+  border: none;
+  padding: 12px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+  transition: 0.3s;
+}
+
+#scrollTopBtn:hover {
+  background: #626675;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #222;
+  color: #fff;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Loader */
 #loader {
   position: fixed;
-  inset: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: #222;
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 9999;
+  align-items: center;
+  z-index: 2000;
+  transition: opacity 0.5s ease;
 }
 
 #loader.hide {
   opacity: 0;
   pointer-events: none;
-  transition: 0.5s;
 }
 
 .spinner {
-  width: 50px;
-  height: 50px;
+  width: 55px;
+  height: 55px;
   border: 5px solid #444;
   border-top-color: #BB4500;
   border-radius: 50%;
-  animation: spin 1s linear infinite;
+  animation: spin 0.9s linear infinite;
 }
 
 @keyframes spin {
   to { transform: rotate(360deg); }
 }
 
-/* =========================
-   DARK MODE (CLEAN)
-========================= */
+/* Dark mode */
 body.dark {
   background: #121212;
   color: #ddd;
 }
 
-body.dark header {
+body.dark header,
+body.dark footer,
+body.dark #contact {
   background: #1a1a1a;
 }
 
-body.dark .service {
-  background: #2a2a2a;
-}
-
-body.dark .portfolio-box .service {
-  background: #2a2a2a;
-}
-
+body.dark .service,
 body.dark .filter-btn {
   background: #2a2a2a;
 }
@@ -249,15 +392,49 @@ body.dark .filter-btn.active {
   background: #BB4500;
 }
 
-/* =========================
-   RESPONSIVE
-========================= */
+body.dark .gallery .item::after {
+  background: rgba(255,255,255,0.05);
+}
+
+/* Mobile */
 @media (max-width: 768px) {
-  .portfolio-box {
-    grid-template-columns: 1fr;
+  #hero h1 {
+    font-size: 32px;
   }
 
-  nav ul {
-    flex-direction: column;
+  h2 {
+    font-size: 26px;
   }
+
+  .service {
+    width: 100%;
+  }
+
+  .gallery .item {
+    width: 100%;
+    height: 180px;
+  }
+}
+
+/* Phone input */
+.iti {
+  width: 100%;
+  margin-bottom: 15px;
+  box-sizing: border-box;
+}
+
+.iti__field {
+  width: 100% !important;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  font-family: inherit;
+  font-size: 16px;
+  background: transparent;
+  color: #eee;
+}
+
+.iti__field:focus {
+  border-color: #ee0000;
+  box-shadow: 0 0 6px rgb(0, 0, 0);
 }
