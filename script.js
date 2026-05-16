@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
      PORTFOLIO FILTER (WORKING 100%)
   ============================ */
   const filterBtns = document.querySelectorAll(".filter-btn");
-  const items = document.querySelectorAll("#projects .item");
+  const items = document.querySelectorAll("#projects .service");
 
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
