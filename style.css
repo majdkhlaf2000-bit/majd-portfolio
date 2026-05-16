@@ -618,11 +618,11 @@ body.dark .gallery .item {
   text-align: center;
 }
 
-#projects .service{
+.service{
   position: relative;
 }
 
-#projects .count{
+.count{
   position: absolute;
   top: 10px;
   right: 10px;
@@ -632,10 +632,4 @@ body.dark .gallery .item {
   padding: 4px 8px;
   border-radius: 20px;
   font-weight: bold;
-}
-
-/* نفس الهوفر تبع My Services (بدون تغيير) */
-#projects .service:hover{
-  background: #BB4500;      
-  transform: translateY(-5px);
 }
