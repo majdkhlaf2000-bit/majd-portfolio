@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>معرض أعمال Majd</title>
+  <title>Majd Portfolio</title>
+
   <link rel="stylesheet" href="style.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"/>
@@ -17,6 +18,7 @@
 
 <header>
   <div class="logo">Majd Khlaf</div>
+
   <nav>
     <ul>
       <li><a href="#hero">Home</a></li>
@@ -24,6 +26,7 @@
       <li><a href="#services">Services</a></li>
       <li><a href="#projects">Portfolio</a></li>
       <li><a href="#contact">Contact</a></li>
+
       <li>
         <button id="darkModeToggle" class="dark-btn">
           <span id="darkIcon">🌙</span>
@@ -33,90 +36,34 @@
   </nav>
 </header>
 
+<!-- HERO -->
 <section id="hero">
   <h1>A WORLD OF CREATIVITY</h1>
   <p>Photographer - Videographer - Graphic Designer</p>
-  <a href="#projects" class="btn">View My Work</a>
+  <a href="#projects" class="btn">View Work</a>
 </section>
 
+<!-- ABOUT -->
 <section id="about">
   <div class="about-container">
     <img src="./image/logo.png" class="about-img">
+
     <div class="about-text">
       <h2>About Me</h2>
-      <p>I am Majd Khlaf...</p>
+      <p>I am Majd Khlaf, Photographer & Designer.</p>
     </div>
   </div>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
   <h2>My Services</h2>
+
   <div class="services-box">
     <div class="service">
       <h3>Photography</h3>
+      <p>Professional shooting</p>
     </div>
+
     <div class="service">
-      <h3>Graphic Design</h3>
-    </div>
-  </div>
-</section>
-
-<section id="projects">
-  <h2>Portfolio</h2>
-
-  <div class="filters">
-    <button class="filter-btn active" data-filter="all">All</button>
-    <button class="filter-btn" data-filter="photo">Photo</button>
-    <button class="filter-btn" data-filter="design">Design</button>
-  </div>
-
-  <!-- IMPORTANT -->
-  <div class="portfolio-box">
-
-    <div class="service photo"><h3>Graduation</h3><span class="count">10</span></div>
-    <div class="service photo"><h3>Engagement</h3></div>
-    <div class="service photo"><h3>Decor</h3></div>
-    <div class="service photo"><h3>Street Photography</h3></div>
-    <div class="service photo"><h3>Baptism</h3></div>
-    <div class="service photo"><h3>Nature</h3></div>
-    <div class="service photo"><h3>Products</h3></div>
-
-    <div class="service design"><h3>Design 1</h3></div>
-    <div class="service design"><h3>Design 2</h3></div>
-
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact Me</h2>
-
-  <form action="https://formspree.io/f/xpqozaqp" method="POST">
-    <input type="text" placeholder="Name">
-    <input type="tel" id="phone" placeholder="Phone">
-    <input type="email" placeholder="Email">
-    <textarea placeholder="Message"></textarea>
-    <button class="btn">Send</button>
-  </form>
-</section>
-
-<button id="scrollTopBtn">↑</button>
-
-<footer>
-  <p>© 2025 Majd</p>
-</footer>
-
-<script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
-
-<script>
-const input = document.querySelector("#phone");
-window.intlTelInput(input, {
-  initialCountry: "auto",
-  separateDialCode: true,
-  preferredCountries: ["sy","ae","nl"],
-});
-</script>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+      <h3
