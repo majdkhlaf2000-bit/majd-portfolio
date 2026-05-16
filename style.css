@@ -618,8 +618,24 @@ body.dark .gallery .item {
   text-align: center;
 }
 
+#projects .service{
+  position: relative;
+}
+
+#projects .count{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #BB4500;
+  color: #fff;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
 /* نفس الهوفر تبع My Services (بدون تغيير) */
 #projects .service:hover{
-  background: #BB4500;
+  background: #BB4500;      
   transform: translateY(-5px);
 }
