@@ -1,69 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar">
 <head>
   <meta charset="UTF-8">
-  <title>Majd Portfolio</title>
-
+  <title>معرض أعمال Majd</title>
   <link rel="stylesheet" href="style.css">
 
+  <!-- مكتبة رقم الموبايل -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/css/intlTelInput.css"/>
 </head>
-
 <body>
 
-<!-- LOADER -->
-<div id="loader">
-  <div class="spinner"></div>
-</div>
-
-<header>
-  <div class="logo">Majd Khlaf</div>
-
-  <nav>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
-      <li><a href="#projects">Portfolio</a></li>
-      <li><a href="#contact">Contact</a></li>
-
-      <li>
-        <button id="darkModeToggle" class="dark-btn">
-          <span id="darkIcon">🌙</span>
-        </button>
-      </li>
-    </ul>
-  </nav>
-</header>
-
-<!-- HERO -->
-<section id="hero">
-  <h1>A WORLD OF CREATIVITY</h1>
-  <p>Photographer - Videographer - Graphic Designer</p>
-  <a href="#projects" class="btn">View Work</a>
-</section>
-
-<!-- ABOUT -->
-<section id="about">
-  <div class="about-container">
-    <img src="./image/logo.png" class="about-img">
-
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>I am Majd Khlaf, Photographer & Designer.</p>
-    </div>
+  <!-- رأس الموقع -->
+  <div id="loader">
+    <div class="spinner"></div>
   </div>
-</section>
 
-<!-- SERVICES -->
-<section id="services">
-  <h2>My Services</h2>
+  <header>
+    <div class="logo">Majd Khlaf</div>
+    <nav>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#projects">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="darkModeToggle" class="dark-btn">
+            <span id="darkIcon">🌙</span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-  <div class="services-box">
-    <div class="service">
-      <h3>Photography</h3>
-      <p>Professional shooting</p>
+  <!-- قسم الترحيب -->
+  <section id="hero">
+    <h1>A WORLD OF CREATIVITY</h1>
+    <p>Photographer - Videographer - Graphic Designer</p>
+    <a href="#projects" class="btn">View My Work</a>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <div class="about-container">
+      <img src="./image/logo.png" alt="Majd Photo" class="about-img">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>
+          I am Majd Khlaf, a passionate Photographer, Videographer, and Graphic Designer.
+          I create visual stories through creative photography, cinematic videos, and
+          modern graphic design.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services">
+    <h2 class="section-title">My Services</h2>
+
+    <div class="services-box">
+      <div class="service">
+        <h3>📸 Photography</h3>
+        <p>Professional photography.</p>
+      </div>
+
+      <div class="service">
+        <h3>🎨 Graphic Design</h3>
+        <p>Logos & designs.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="projects">
+    <h2>Portfolio</h2>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="photo">Photo</button>
+      <button class="filter-btn" data-filter="design">Design</button>
     </div>
 
-    <div class="service">
-      <h3
+    <!-- 🔴 FIX: فقط هذا التعديل -->
+    <div class="portfolio-box">
+
+      <!-- PHOTO ALBUMS -->
+      <div class="service photo" onclick="window.location.href='album1.html'">
+        <h3>📸 Photo Album 1</h3>
+      </div>
+
+      <div class="service photo" onclick="window.location.href='album2.html'">
+        <h3>📸 Photo Album 2</h3>
+      </div>
+
+      <div class="service photo" onclick="window.location.href='album3.html'">
+        <h3>📸 Photo Album 3</h3>
+      </div>
+
+      <div class="service photo" onclick="window.location.href='album4.html'">
+        <h3>📸 Photo Album 4</h3>
+      </div>
+
+      <!-- DESIGN ALBUMS -->
+      <div class="service design" onclick="window.location.href='design1.html'">
+        <h3>🎨 Design Album 1</h3>
+      </div>
+
+      <div class="service design" onclick="window.location.href='design2.html'">
+        <h3>🎨 Design Album 2</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+
+    <form action="https://formspree.io/f/xpqozaqp" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+
+      <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+
+      <button type="submit" class="btn">Send</button>
+    </form>
+  </section>
+
+  <button id="scrollTopBtn">↑</button>
+
+  <footer>
+    <p>© 2025 Majd</p>
+  </footer>
+
+  <!-- سكربت رقم الموبايل -->
+  <script src="https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.1/build/js/intlTelInput.min.js"></script>
+
+  <script>
+    const input = document.querySelector("#phone");
+    window.intlTelInput(input, {
+      initialCountry: "auto",
+      separateDialCode: true,
+      preferredCountries: ["sy", "ae", "nl"],
+    });
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
