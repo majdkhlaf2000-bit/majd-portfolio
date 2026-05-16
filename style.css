@@ -623,13 +623,15 @@ body.dark .gallery .item {
 }
 
 .count{
-  position: absolute;
-  top: 10px;
-  right: 10px;
+  display: block;
+  margin-top: 10px;
   background: #BB4500;
   color: #fff;
   font-size: 12px;
-  padding: 4px 8px;
+  padding: 4px 10px;
   border-radius: 20px;
   font-weight: bold;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
 }
