@@ -1,26 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ============================
-     زر العودة للأعلى
-  ============================ */
-  const scrollBtn = document.getElementById("scrollTopBtn");
-
-  window.addEventListener("scroll", () => {
-    if (scrollBtn) {
-      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    }
-  });
-
-  if (scrollBtn) {
-    scrollBtn.addEventListener("click", () => {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
-
-
-  /* ============================
-     LOADER
-  ============================ */
+  /* =========================
+     LOADER (FIXED)
+  ========================= */
   const loader = document.getElementById("loader");
 
   window.addEventListener("load", () => {
@@ -31,14 +13,12 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-
-  /* ============================
+  /* =========================
      DARK MODE
-  ============================ */
+  ========================= */
   const darkToggle = document.getElementById("darkModeToggle");
   const darkIcon = document.getElementById("darkIcon");
 
-  // استرجاع الوضع
   if (localStorage.getItem("darkMode") === "enabled") {
     document.body.classList.add("dark");
     if (darkIcon) darkIcon.textContent = "☀️";
@@ -49,26 +29,40 @@ document.addEventListener("DOMContentLoaded", () => {
       document.body.classList.toggle("dark");
 
       if (document.body.classList.contains("dark")) {
-        if (darkIcon) darkIcon.textContent = "☀️";
         localStorage.setItem("darkMode", "enabled");
+        if (darkIcon) darkIcon.textContent = "☀️";
       } else {
-        if (darkIcon) darkIcon.textContent = "🌙";
         localStorage.setItem("darkMode", "disabled");
+        if (darkIcon) darkIcon.textContent = "🌙";
       }
     });
   }
 
+  /* =========================
+     SCROLL TOP BUTTON
+  ========================= */
+  const scrollBtn = document.getElementById("scrollTopBtn");
 
-  /* ============================
+  if (scrollBtn) {
+    window.addEventListener("scroll", () => {
+      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+    });
+
+    scrollBtn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
+
+  /* =========================
      PORTFOLIO FILTER (FIXED)
-  ============================ */
+  ========================= */
   const filterBtns = document.querySelectorAll(".filter-btn");
-  const items = document.querySelectorAll("#projects .service");
+  const items = document.querySelectorAll(".portfolio-box .service");
 
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
 
-      // إزالة active من كل الأزرار
+      // remove active
       filterBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
@@ -78,12 +72,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         if (filter === "all") {
           item.style.display = "flex";
-        } 
-        else if (item.classList.contains(filter)) {
-          item.style.display = "flex";
-        } 
-        else {
-          item.style.display = "none";
+        } else {
+          if (item.classList.contains(filter)) {
+            item.style.display = "flex";
+          } else {
+            item.style.display = "none";
+          }
         }
 
       });
