@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ============================
-     LOADER (FIXED)
+     LOADER
   ============================ */
   const loader = document.getElementById("loader");
 
@@ -38,6 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const darkToggle = document.getElementById("darkModeToggle");
   const darkIcon = document.getElementById("darkIcon");
 
+  // استرجاع الوضع
   if (localStorage.getItem("darkMode") === "enabled") {
     document.body.classList.add("dark");
     if (darkIcon) darkIcon.textContent = "☀️";
@@ -59,7 +60,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
   /* ============================
-     PORTFOLIO FILTER (WORKING 100%)
+     PORTFOLIO FILTER (FIXED)
   ============================ */
   const filterBtns = document.querySelectorAll(".filter-btn");
   const items = document.querySelectorAll("#projects .service");
@@ -67,6 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
   filterBtns.forEach(btn => {
     btn.addEventListener("click", () => {
 
+      // إزالة active من كل الأزرار
       filterBtns.forEach(b => b.classList.remove("active"));
       btn.classList.add("active");
 
@@ -75,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
       items.forEach(item => {
 
         if (filter === "all") {
-          item.style.display = "block";
+          item.style.display = "flex";
         } 
         else if (item.classList.contains(filter)) {
           item.style.display = "flex";
