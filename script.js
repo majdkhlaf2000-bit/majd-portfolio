@@ -91,31 +91,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-const filterBtns = document.querySelectorAll('.filter-btn');
-const portfolioItems = document.querySelectorAll('#projects .item');
-
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-
-    // تغيير active
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-
-    const filter = btn.getAttribute('data-filter');
-
-    portfolioItems.forEach(item => {
-
-      if (filter === 'all') {
-        item.style.display = "block";
-      } 
-      else if (item.classList.contains(filter)) {
-        item.style.display = "block";
-      } 
-      else {
-        item.style.display = "none";
-      }
-
-    });
-
-  });
 });
