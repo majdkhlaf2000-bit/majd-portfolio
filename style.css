@@ -171,6 +171,13 @@ nav ul li button:hover {
   align-items: center;
 }
 
+/* Gallery images */
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 #projects h2 {
   text-align: center;
   margin-bottom: 30px;
