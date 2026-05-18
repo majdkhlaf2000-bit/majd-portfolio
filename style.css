@@ -177,7 +177,7 @@ nav ul li button:hover {
 }
 
 #projects .service{
-  width: 100%
+  width: 100%;
   height: 220px;
   border-radius: 20px;
   display: flex;
@@ -628,33 +628,20 @@ body.dark .gallery .item {
   box-shadow: 0 0 6px rgb(0, 0, 0);
 }
 
-/* ===== ALBUMS = SAME AS SERVICES ===== */
-
-#projects .services-box{
-  display: flex;
-  justify-content: center;
+.portfolio-box{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  flex-wrap: wrap;
+  margin-top: 30px;
 }
 
 #projects .service{
-  width: 250px;
-  height: 180px;
+  width: 100%;
+  height: 220px;
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  cursor: pointer;
-}
-
-#projects .service h3{
-  font-size: 20px;
-  color: #fff;
   text-align: center;
-}
-
-/* نفس الهوفر تبع My Services (بدون تغيير) */
-#projects .service:hover{
-  background: #BB4500;
-  transform: translateY(-5px);
+  cursor: pointer;
 }
