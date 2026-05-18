@@ -169,6 +169,14 @@ nav ul li button:hover {
   text-align: center;
   margin-bottom: 30px;
 }
+.portfolio-box{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  max-width: 700px;
+  margin: auto;
+}
 
 /* الفلاتر */
 .filters {
