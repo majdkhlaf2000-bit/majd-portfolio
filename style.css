@@ -597,3 +597,34 @@ body.dark .gallery .item {
   border-color: #ee0000;   /* نفس اللون الأخضر اللي بتحبه */
   box-shadow: 0 0 6px rgb(0, 0, 0);
 }
+
+/* ===== ALBUMS = SAME AS SERVICES ===== */
+
+#projects .services-box{
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+#projects .service{
+  width: 250px;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+#projects .service h3{
+  font-size: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+/* نفس الهوفر تبع My Services (بدون تغيير) */
+#projects .service:hover{
+  background: #BB4500;
+  transform: translateY(-5px);
+}
